@@ -48,7 +48,7 @@ ol {
   display: grid;
   grid-template-columns: 711px 399px;
   grid-template-areas: "result details";
-  align-items: end;
+  place-items: end;
   gap: 30px;
   width: 1140px;
   margin: auto;
@@ -102,7 +102,6 @@ ol {
   font-size: 18px;
   line-height: 22px; 
   color: #fff;
-
 }
 
 .search-form__label {
@@ -116,14 +115,9 @@ ol {
   outline: none;
 }
 
-.search-form__label:hover {
-  text-decoration: 1px underline;
+.search-form__label:hover .search-form__label-text { 
+  text-decoration: underline;
   text-underline-offset: 2px;
-  cursor: pointer;
-}
-
-.search-form__label:hover:has(.search-form__textfield) {
-  text-decoration: none;
 }
 
 .search-form__checkbox {
@@ -228,6 +222,7 @@ ol {
 
 .content__card-link:hover {
   text-decoration: none;
+  text-decoration: #FFF underline; /* добавил: "При наведении на ссылку карточки, нужно добавить нижнее подчёркивание тексту" */
 }
 
 .content__card-link:active {
@@ -315,6 +310,10 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   left: 1px;
   background-color: #fff;
 }
+
+.button:active {
+   background-color: #545050; /* добавил: В активном состоянии кнопок не хватает изменения цвета фона */
+} 
 
 /* Шаг 7. Доступность — скрытие элементов */
 
