@@ -18,10 +18,8 @@ html {
   margin: auto;
   color: #fff;
   background-color: #1b1919;
-  margin-top: 55px;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  background-color: #1b1919;
 }
 
 h1,
@@ -59,7 +57,6 @@ ol {
 .result {
   grid-area: result;
   width: 100%;
-  height: 456px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -103,9 +100,9 @@ ol {
   align-self: start;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 22px; 
   color: #fff;
-  block-size: 22px;
+
 }
 
 .search-form__label {
@@ -269,6 +266,10 @@ ol {
 }
 
 .content__video-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
